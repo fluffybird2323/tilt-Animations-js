@@ -1,0 +1,32 @@
+#on mouse Enter
+
+function() {
+  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {},
+    t = arguments[1];
+  return this.updateElementPosition(), this.setState(Object.assign({}, this.state, {
+    style: o({}, this.state.style, {
+      willChange: "transform"
+    })
+  })), this.setTransition(), e(t)
+}
+
+
+#on mouse move
+function() {
+  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {},
+    t = arguments[1];
+  return this.updateElementPosition(), this.setState(Object.assign({}, this.state, {
+    style: o({}, this.state.style, {
+      willChange: "transform"
+    })
+  })), this.setTransition(), e(t)
+}
+
+
+#on mouse leave
+
+function() {
+  var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {},
+    t = arguments[1];
+  return this.setTransition(), this.settings.reset && this.reset(), e(t)
+}
